@@ -1,0 +1,69 @@
+{
+  "sidebar": {
+    "brandText": "Feven Admin",
+    "brandIcon": "FZ",
+    "navItems": [
+      { "id": "dashboard", "icon": "📊", "label": "Dashboard", "href": "/admin" },
+      { "id": "projects", "icon": "🎬", "label": "Projects", "href": "/admin/projects" },
+      { "id": "blog", "icon": "📝", "label": "Blog", "href": "/admin/blog" },
+      { "id": "contacts", "icon": "📧", "label": "Contacts", "href": "/admin/contacts" },
+      { "id": "settings", "icon": "⚙️", "label": "Settings", "href": "/admin/settings" }
+    ],
+    "viewSiteLabel": "My Website",
+    "signOutLabel": "Sign Out",
+    "footerText": "Feven Personal Website CMS Built By SoDar!"
+  },
+  "login": {
+    "logo": "🎬",
+    "title": "FZ Admin Panel",
+    "subtitle": "Enter your password to continue",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter admin password",
+    "submitText": "Sign In",
+    "loadingText": "Authenticating...",
+    "errorDefault": "Invalid password"
+  },
+  "dashboard": {
+    "greeting": "Welcome back, Feven",
+    "stats": {
+      "projects": "Total Projects",
+      "posts": "Blog Posts",
+      "contacts": "Total Messages",
+      "unread": "Unread Messages"
+    }
+  },
+  "labels": {
+    "buttons": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "create": "Create",
+      "update": "Update",
+      "delete": "Delete",
+      "edit": "Edit",
+      "publish": "Publish",
+      "unpublish": "Unpublish",
+      "markRead": "Mark as Read",
+      "reply": "Reply via Email",
+      "confirm": "Confirm",
+      "keep": "Keep",
+      "remove": "Remove",
+      "add": "Add",
+      "search": "Search",
+      "filter": "Filter"
+    },
+    "emptyStates": {
+      "noProjects": "No projects found",
+      "noPosts": "No blog posts found",
+      "noContacts": "No messages found",
+      "createFirst": "Create your first"
+    },
+    "toasts": {
+      "saved": "Saved successfully",
+      "deleted": "Deleted successfully",
+      "created": "Created successfully",
+      "updated": "Updated successfully",
+      "error": "Something went wrong",
+      "networkError": "Network error. Please try again."
+    }
+  }
+}

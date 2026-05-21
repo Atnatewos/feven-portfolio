@@ -1,0 +1,18 @@
+{
+  "pageTitle": { "en": "My Work", "am": "ስራዎቼ" },
+  "subtitle": {
+    "en": "",
+    "am": ""
+  },
+  "showFilters": true,
+  "filterAllLabel": { "en": "All Work", "am": "ሁሉም" },
+  "categories": [
+    { "id": "animation", "label": { "en": "Animation", "am": "አኒሜሽን" } },
+    { "id": "design", "label": { "en": "Graphic Design", "am": "ግራፊክ ዲዛይን" } },
+    { "id": "architecture", "label": { "en": "Architecture", "am": "አርክቴክቸር" } }
+  ],
+  "projectCard": {
+    "viewText": { "en": "View Project", "am": "ፕሮጀክት ይመልከቱ" },
+    "noPreviewText": { "en": "No Preview", "am": "ቅድመ እይታ የለም" }
+  }
+}

@@ -1,0 +1,362 @@
+/* File: components/sections/SocialContact.css */
+/* ================================================================== */
+/*  Social Contact — Professional, Beautiful, Modern Design System     */
+/*  Every pixel crafted for conversion. Mobile-first, animated, clean. */
+/* ================================================================== */
+
+.social-contact-wrapper {
+  margin-bottom: var(--space-10, 40px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Section Labels                                                     */
+/* ------------------------------------------------------------------ */
+.social-contact-section-label {
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: 700;
+  color: var(--color-text-muted, #B8B0A8);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: var(--space-4, 16px);
+  padding-left: var(--space-1, 4px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Grid — Phone & Social Cards                                        */
+/* ------------------------------------------------------------------ */
+.social-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-3, 12px);
+  margin-bottom: var(--space-6, 24px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Individual Card                                                    */
+/* ------------------------------------------------------------------ */
+.social-contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4, 16px);
+  padding: var(--space-4, 16px) var(--space-5, 20px);
+  background: var(--color-surface, #FFFFFF);
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl, 20px);
+  text-decoration: none;
+  min-height: 72px;
+  transition:
+    transform 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 350ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 350ms ease,
+    background 350ms ease;
+  animation: contactCardIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.03),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.social-contact-item:nth-child(1) { animation-delay: 0.04s; }
+.social-contact-item:nth-child(2) { animation-delay: 0.08s; }
+.social-contact-item:nth-child(3) { animation-delay: 0.12s; }
+.social-contact-item:nth-child(4) { animation-delay: 0.16s; }
+.social-contact-item:nth-child(5) { animation-delay: 0.20s; }
+.social-contact-item:nth-child(6) { animation-delay: 0.24s; }
+.social-contact-item:nth-child(7) { animation-delay: 0.28s; }
+.social-contact-item:nth-child(8) { animation-delay: 0.32s; }
+.social-contact-item:nth-child(9) { animation-delay: 0.36s; }
+.social-contact-item:nth-child(10) { animation-delay: 0.40s; }
+
+/*
+ * Gradient border reveal on hover.
+ * Uses a pseudo-element background to create a smooth animated border.
+ */
+.social-contact-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl, 20px);
+  padding: 1.5px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary, #6366F1),
+    var(--color-accent, #10B981),
+    var(--color-primary, #6366F1)
+  );
+  background-size: 200% 200%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.social-contact-item:hover::after {
+  opacity: 1;
+  animation: gradientShift 3s ease infinite;
+}
+
+/*
+ * Soft background lift on hover.
+ */
+.social-contact-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.03),
+    rgba(16, 185, 129, 0.02)
+  );
+  opacity: 0;
+  transition: opacity 350ms ease;
+  border-radius: var(--radius-xl, 20px);
+}
+
+.social-contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.04),
+    0 12px 24px rgba(99, 102, 241, 0.08),
+    0 0 0 1px rgba(99, 102, 241, 0.06);
+}
+
+.social-contact-item:hover::before {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Card Icon                                                          */
+/* ------------------------------------------------------------------ */
+.social-contact-icon {
+  font-size: 26px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.06),
+    rgba(99, 102, 241, 0.02)
+  );
+  border-radius: var(--radius-md, 14px);
+  flex-shrink: 0;
+  transition:
+    transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 350ms ease;
+}
+
+.social-contact-item:hover .social-contact-icon {
+  transform: scale(1.08);
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1),
+    rgba(99, 102, 241, 0.04)
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Card Text                                                          */
+/* ------------------------------------------------------------------ */
+.social-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.social-contact-label {
+  font-size: var(--text-xs, 0.7rem);
+  font-weight: 600;
+  color: var(--color-text-muted, #B8B0A8);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.social-contact-value {
+  font-size: var(--text-sm, 0.9rem);
+  font-weight: 600;
+  color: var(--color-text, #1A1530);
+  word-break: break-word;
+  line-height: 1.35;
+  transition: color 250ms ease;
+}
+
+.social-contact-item:hover .social-contact-value {
+  color: var(--color-primary, #6366F1);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Card Arrow Indicator                                               */
+/* ------------------------------------------------------------------ */
+.social-contact-arrow {
+  font-size: var(--text-base, 1rem);
+  color: var(--color-text-muted, #B8B0A8);
+  flex-shrink: 0;
+  transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  transform: translateX(-6px);
+}
+
+.social-contact-item:hover .social-contact-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--color-primary, #6366F1);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Email — Inline, Beautiful, Above the Form                          */
+/* ------------------------------------------------------------------ */
+.social-contact-email {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-4, 16px) 0 var(--space-8, 32px) 0;
+  margin-bottom: var(--space-2, 8px);
+}
+
+.social-contact-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3, 12px);
+  padding: var(--space-3, 12px) var(--space-6, 24px);
+  font-size: var(--text-base, 1rem);
+  font-weight: 500;
+  color: var(--color-text-secondary, #8B7E74);
+  text-decoration: none;
+  border-radius: var(--radius-full, 9999px);
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.04),
+    rgba(16, 185, 129, 0.02)
+  );
+  border: 1px solid var(--color-border, #E8E0D8);
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 48px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.social-contact-email-link:hover {
+  color: var(--color-primary, #6366F1);
+  border-color: var(--color-primary, #6366F1);
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.08),
+    rgba(16, 185, 129, 0.04)
+  );
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 12px rgba(99, 102, 241, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.social-contact-email-icon {
+  font-size: var(--text-lg, 1.125rem);
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.social-contact-email-link:hover .social-contact-email-icon {
+  transform: scale(1.15);
+}
+
+.social-contact-email-text {
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Animations                                                         */
+/* ------------------------------------------------------------------ */
+@keyframes contactCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Empty State                                                        */
+/* ------------------------------------------------------------------ */
+.social-contact-empty {
+  text-align: center;
+  padding: var(--space-8, 32px) var(--space-4, 16px);
+  color: var(--color-text-muted, #B8B0A8);
+  font-size: var(--text-sm, 0.875rem);
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Responsive — Mobile                                                */
+/* ------------------------------------------------------------------ */
+@media (max-width: 640px) {
+  .social-contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2, 8px);
+  }
+
+  .social-contact-item {
+    padding: var(--space-3, 12px) var(--space-4, 16px);
+    min-height: 64px;
+    gap: var(--space-3, 12px);
+    border-radius: var(--radius-lg, 16px);
+  }
+
+  .social-contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    border-radius: var(--radius-sm, 10px);
+  }
+
+  .social-contact-value {
+    font-size: var(--text-sm, 0.85rem);
+  }
+
+  .social-contact-arrow {
+    opacity: 0.35;
+    transform: translateX(0);
+  }
+
+  .social-contact-email {
+    padding: var(--space-3, 12px) 0 var(--space-6, 24px) 0;
+  }
+
+  .social-contact-email-link {
+    width: 100%;
+    justify-content: center;
+    font-size: var(--text-sm, 0.875rem);
+    padding: var(--space-3, 12px) var(--space-5, 20px);
+  }
+}
+
+@media (max-width: 380px) {
+  .social-contact-item {
+    padding: var(--space-3, 10px) var(--space-3, 12px);
+    min-height: 56px;
+    gap: var(--space-2, 8px);
+  }
+
+  .social-contact-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .social-contact-value {
+    font-size: var(--text-xs, 0.8rem);
+  }
+}

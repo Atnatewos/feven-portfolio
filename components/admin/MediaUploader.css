@@ -1,0 +1,25 @@
+.media-uploader-dropzone {
+  border: 2px dashed var(--admin-border);
+  border-radius: 12px;
+  padding: 60px 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 24px;
+}
+
+.media-uploader-dropzone:hover {
+  border-color: var(--admin-primary);
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+.media-uploader-dropzone.drag-active {
+  border-color: var(--admin-primary);
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.media-uploader-dropzone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

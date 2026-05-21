@@ -1,0 +1,54 @@
+{
+  "siteName": "Feven Zerabruk",
+  "siteNameShort": "Feven",
+  "tagline": {
+    "en": "2D Animator, Graphic Designer & Architecture Student",
+    "am": "2D አኒሜተር፣ ግራፊክ ዲዛይነር እና አርክቴክቸር ተማሪ"
+  },
+  "logo": {
+    "light": "/images/feven-logo-white.svg",
+    "dark": "/images/feven-logo-black.svg",
+    "alt": "Feven Zerabruk logo"
+  },
+  "favicon": "/favicon.ico",
+  "colors": {
+    "background": "#0B0B16",
+    "backgroundElevated": "#111122",
+    "surface": "#151526",
+    "surfaceHover": "#1C1C35",
+    "border": "#252545",
+    "borderLight": "#323260",
+    "text": "#FFFFFF",
+    "textSecondary": "#A5B4FC",
+    "textMuted": "#6B7280",
+    "primary": "#D946EF",
+    "primaryGlow": "rgba(217, 70, 239, 0.4)",
+    "secondary": "#3B82F6",
+    "secondaryGlow": "rgba(59, 130, 246, 0.4)",
+    "accent": "#10B981",
+    "accentGlow": "rgba(16, 185, 129, 0.4)",
+    "success": "#10B981",
+    "successGlow": "rgba(16, 185, 129, 0.4)",
+    "error": "#EF4444",
+    "errorGlow": "rgba(239, 68, 68, 0.4)",
+    "warning": "#F59E0B",
+    "warningGlow": "rgba(245, 158, 11, 0.4)",
+    "animation": "#00FFCC",
+    "animationGlow": "rgba(0, 255, 204, 0.5)",
+    "architecture": "#00D2FF",
+    "architectureGlow": "rgba(0, 210, 255, 0.5)",
+    "design": "#D946EF",
+    "designGlow": "rgba(217, 70, 239, 0.5)"
+  },
+  "typography": {
+    "headingFont": "'Plus Jakarta Sans', 'Inter', system-ui, sans-serif",
+    "bodyFont": "'Inter', 'DM Sans', system-ui, sans-serif",
+    "baseSize": "16px"
+  },
+  "glassmorphism": {
+    "background": "rgba(21, 21, 38, 0.7)",
+    "border": "rgba(255, 255, 255, 0.08)",
+    "blur": "16px",
+    "saturation": "180%"
+  }
+}

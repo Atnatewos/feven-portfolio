@@ -1,0 +1,271 @@
+/* File: components/sections/AboutSection.css */
+/* ================================================================== */
+/*  About Page — Dark Cyberpunk, Circular Avatar, Open Top/Right       */
+/* ================================================================== */
+
+.about-page {
+  padding: calc(var(--header-height, 72px) + var(--space-8, 32px)) 0 var(--space-20, 80px);
+  min-height: 100vh;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: var(--space-12, 48px);
+}
+
+.about-title {
+  font-size: var(--text-4xl, 2.25rem);
+  font-weight: var(--weight-extrabold);
+  color: var(--color-text, #FFFFFF);
+  letter-spacing: -0.5px;
+  margin-bottom: var(--space-4, 16px);
+}
+
+.about-taglines {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4, 16px);
+  flex-wrap: wrap;
+}
+
+.about-tagline {
+  padding: var(--space-1, 4px) var(--space-3, 12px);
+  font-size: var(--text-xs, 0.7rem);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: var(--radius-full, 9999px);
+  background: rgba(0, 255, 204, 0.1);
+  color: var(--color-animation, #00FFCC);
+  border: 1px solid rgba(0, 255, 204, 0.25);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Grid                                                               */
+/* ------------------------------------------------------------------ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12, 48px);
+  margin-bottom: var(--space-12, 48px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Left Column                                                        */
+/* ------------------------------------------------------------------ */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8, 32px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Circular Avatar — Full Glow Ring, Border Open at Top & Right       */
+/*                                                                     */
+/*  The full neon glow ring stays around the entire circle.            */
+/*  The visible border only appears on BOTTOM and LEFT arcs,           */
+/*  while TOP and RIGHT arcs are open — creating a 3D effect          */
+/*  where the image extends beyond the frame on those sides.          */
+/* ------------------------------------------------------------------ */
+.about-avatar-frame {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  overflow: visible;
+}
+
+/*
+ * Full circular glow ring around the avatar.
+ * This stays as the original design — full 360-degree glow.
+ */
+.about-avatar-glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--color-animation, #00FFCC),
+    var(--color-accent, #10B981),
+    var(--color-animation, #00FFCC)
+  );
+  background-size: 200% 200%;
+  animation: avatarGlowShift 4s ease infinite;
+  filter: blur(3px);
+  opacity: 0.7;
+}
+
+/*
+ * Circular image wrapper with visible border only on BOTTOM and LEFT.
+ * Uses border-bottom and border-left on a circle — the arcs are visible
+ * on the bottom-left quadrant of the circle while top-right is open.
+ */
+.about-avatar-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: visible;
+  border-bottom: 3px solid rgba(0, 255, 204, 0.6);
+  border-left: 3px solid rgba(0, 255, 204, 0.6);
+  box-shadow:
+    -8px 8px 30px rgba(0, 255, 204, 0.2),
+    -4px 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: box-shadow var(--transition-slow);
+}
+
+.about-avatar-image-wrapper:hover {
+  box-shadow:
+    -12px 12px 40px rgba(0, 255, 204, 0.35),
+    -6px 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.about-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-radius: 50%;
+}
+
+.about-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 204, 0.1);
+  font-size: 4rem;
+  font-weight: var(--weight-extrabold);
+  color: var(--color-animation, #00FFCC);
+  font-family: var(--font-heading);
+  border-radius: 50%;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Bio                                                                */
+/* ------------------------------------------------------------------ */
+.about-bio {
+  width: 100%;
+}
+
+.about-bio-text {
+  font-size: var(--text-sm, 0.9rem);
+  color: var(--color-text-secondary, #A5B4FC);
+  line-height: 1.7;
+  margin-bottom: var(--space-4, 16px);
+}
+
+.about-location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 6px);
+  font-size: var(--text-sm, 0.85rem);
+  color: var(--color-text-muted, #6B7280);
+}
+
+.about-location-icon {
+  font-size: 14px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Right Column                                                       */
+/* ------------------------------------------------------------------ */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8, 32px);
+}
+
+.about-section-title {
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: var(--weight-bold);
+  color: var(--color-text, #FFFFFF);
+  margin-bottom: var(--space-4, 16px);
+}
+
+.about-tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2, 8px);
+}
+
+.about-tag-item {
+  padding: var(--space-2, 8px) var(--space-4, 16px);
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: var(--weight-medium);
+  border-radius: var(--radius-full, 9999px);
+  background: rgba(0, 255, 204, 0.08);
+  color: var(--color-animation, #00FFCC);
+  border: 1px solid rgba(0, 255, 204, 0.2);
+}
+
+.about-tag-tool {
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--color-secondary, #3B82F6);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Education                                                          */
+/* ------------------------------------------------------------------ */
+.about-education-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3, 12px);
+}
+
+.about-education-item {
+  padding: var(--space-4, 16px) var(--space-5, 20px);
+}
+
+.about-education-degree {
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--weight-bold);
+  color: var(--color-text, #FFFFFF);
+  margin-bottom: var(--space-1, 4px);
+}
+
+.about-education-school {
+  font-size: var(--text-sm, 0.85rem);
+  color: var(--color-text-secondary, #A5B4FC);
+  margin-bottom: var(--space-1, 4px);
+}
+
+.about-education-year {
+  font-size: var(--text-xs, 0.7rem);
+  color: var(--color-text-muted, #6B7280);
+  font-family: var(--font-mono);
+}
+
+/* ------------------------------------------------------------------ */
+/*  CTA                                                                */
+/* ------------------------------------------------------------------ */
+.about-cta {
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Avatar Glow Animation                                              */
+/* ------------------------------------------------------------------ */
+@keyframes avatarGlowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Responsive                                                         */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-avatar-frame {
+    width: 180px;
+    height: 180px;
+  }
+}

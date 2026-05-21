@@ -1,0 +1,76 @@
+.video-embed {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-embed-poster {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-embed-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-embed-poster-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface-hover);
+  color: var(--color-text-secondary);
+}
+
+.video-embed-play-btn {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-inverse);
+  font-size: 2rem;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-embed-poster:hover .video-embed-play-btn {
+  transform: scale(1.1);
+  background-color: var(--color-primary-light);
+}
+
+.video-embed-iframe,
+.video-embed-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-embed-error {
+  padding: var(--space-8);
+  text-align: center;
+  background-color: #FEF2F2;
+  border: var(--border-thin) solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+}
+
+.video-embed-error a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}

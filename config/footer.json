@@ -1,0 +1,32 @@
+{
+  "copyright": {
+    "template": {
+      "en": "© {year} {siteName}. All rights reserved.",
+      "am": "© {year} {siteName}። መብቱ በህግ የተጠበቀ ነው።"
+    }
+  },
+  "social": {
+    "phone": { "url": "", "displayName": "" },
+    "email": { "url": "", "displayName": "" },
+    "instagram": { "url": "", "displayName": "" },
+    "youtube": { "url": "", "displayName": "" },
+    "linkedin": { "url": "", "displayName": "" },
+    "telegram": { "url": "", "displayName": "" },
+    "facebook": { "url": "", "displayName": "" },
+    "tiktok": { "url": "", "displayName": "" },
+    "behance": { "url": "", "displayName": "" },
+    "vimeo": { "url": "", "displayName": "" }
+  },
+  "socialLabels": {
+    "phone": "Phone",
+    "email": "Email",
+    "instagram": "Instagram",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn",
+    "telegram": "Telegram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "behance": "Behance",
+    "vimeo": "Vimeo"
+  }
+}

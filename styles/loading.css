@@ -1,0 +1,214 @@
+/* ==========================================================================
+   ABYSSINIA KINETIC PRELOADER ENGINE
+   Project: Feven Portfolio (Animation, Graphic Design, Architecture)
+   ========================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* 1. Full-Screen Structural Loading Canvas                           */
+/* ------------------------------------------------------------------ */
+.loading-page {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-secondary); /* Deep onyx background layer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-toast); /* Above all interface elements */
+  overflow: hidden;
+  perspective: 1200px;
+  transition: opacity var(--transition-slow), visibility var(--transition-slow);
+}
+
+/* Background grid shifting while loading */
+.loading-page::before {
+  content: '';
+  position: absolute;
+  inset: -100px;
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(228, 228, 231, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(228, 228, 231, 0.03) 1px, transparent 1px);
+  transform: rotateX(60deg) translateZ(-100px);
+  animation: loading-grid-drift 10s linear infinite;
+  will-change: transform;
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. The Multi-Layer Kinetic Sculpt Container                        */
+/* ------------------------------------------------------------------ */
+.loading-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  gap: var(--space-8);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. The Isometric Architectural Cube Loader                         */
+/* ------------------------------------------------------------------ */
+.loading-cube-matrix {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform-style: preserve-3d;
+  transform: rotateX(-22deg) rotateY(45deg);
+  animation: matrix-global-spin 6s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+  will-change: transform;
+}
+
+.cube-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: var(--border-thick) solid var(--color-primary-light);
+  background: rgba(20, 20, 22, 0.8);
+  box-shadow: 0 0 20px rgba(232, 33, 31, 0.15);
+  transition: all var(--transition-base);
+}
+
+/* Matrix positioning mapping space coordinates */
+.face-front  { transform: rotateY(0deg) translateZ(40px); }
+.face-back   { transform: rotateY(180deg) translateZ(40px); border-color: var(--color-primary); }
+.face-left   { transform: rotateY(-90deg) translateZ(40px); }
+.face-right  { transform: rotateY(90deg) translateZ(40px); border-color: var(--color-primary); }
+.face-top    { transform: rotateX(90deg) translateZ(40px); background: rgba(197, 168, 128, 0.1); border-color: var(--color-accent); }
+.face-bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+/* ------------------------------------------------------------------ */
+/* 4. The Typographic Status Tracker & Meter                        */
+/* ------------------------------------------------------------------ */
+.loading-text-wrapper {
+  text-align: center;
+  transform-style: preserve-3d;
+  transform: translateZ(50px);
+}
+
+.loading-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-inverse);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: var(--space-3);
+  display: inline-block;
+  animation: text-pulse-frame 1.5s steps(4, end) infinite;
+}
+
+/* Technical blueprint tracking status line */
+.loading-progress-bar {
+  width: 180px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+}
+
+.loading-progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light), var(--color-accent));
+  transform: translateX(-100%);
+  animation: pipeline-fill 3s cubic-bezier(0.85, 0, 0.15, 1) infinite;
+}
+
+/* ------------------------------------------------------------------ */
+/* 5. Pure Motion Physics Keyframe Blueprints                       */
+/* ------------------------------------------------------------------ */
+
+/* Background spatial blueprint perspective scroll */
+@keyframes loading-grid-drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 60px;
+  }
+}
+
+/* Complex 3D rotation shifts mimicking architectural perspective changes */
+@keyframes matrix-global-spin {
+  0% {
+    transform: rotateX(-22deg) rotateY(45deg) scale3d(1, 1, 1);
+  }
+  25% {
+    transform: rotateX(22deg) rotateY(135deg) scale3d(0.85, 0.85, 0.85);
+  }
+  50% {
+    transform: rotateX(-22deg) rotateY(225deg) scale3d(1.1, 1.1, 1.1);
+  }
+  75% {
+    transform: rotateX(22deg) rotateY(315deg) scale3d(0.9, 0.9, 0.9);
+  }
+  100% {
+    transform: rotateX(-22deg) rotateY(405deg) scale3d(1, 1, 1);
+  }
+}
+
+/* Frame-by-frame text rendering step tracking (2D Animator layout style) */
+@keyframes text-pulse-frame {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(232, 33, 31, 0.6);
+  }
+}
+
+/* Precise non-linear asset streaming progress timeline */
+@keyframes pipeline-fill {
+  0% {
+    transform: translateX(-100%);
+  }
+  30% {
+    transform: translateX(-70%);
+  }
+  60% {
+    transform: translateX(-30%);
+  }
+  85% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* 6. Comprehensive Mobile View Adaptation Mode                       */
+/* ------------------------------------------------------------------ */
+@media (max-width: 576px) {
+  .loading-cube-matrix {
+    width: 60px;
+    height: 60px;
+  }
+  .cube-face {
+    width: 60px;
+    height: 60px;
+  }
+  .face-front  { transform: rotateY(0deg) translateZ(30px); }
+  .face-back   { transform: rotateY(180deg) translateZ(30px); }
+  .face-left   { transform: rotateY(-90deg) translateZ(30px); }
+  .face-right  { transform: rotateY(90deg) translateZ(30px); }
+  .face-top    { transform: rotateX(90deg) translateZ(30px); }
+  .face-bottom { transform: rotateX(-90deg) translateZ(30px); }
+  
+  .loading-progress-bar {
+    width: 140px;
+  }
+}

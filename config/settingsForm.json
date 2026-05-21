@@ -1,0 +1,256 @@
+{
+  "branding": {
+    "siteName": {
+      "label": "Site Name",
+      "placeholder": "Feven Zerabruk",
+      "hint": "Displayed in the header, footer, browser tab, and SEO metadata. This is the primary identifier for your site.",
+      "maxLength": 100
+    },
+    "taglineEn": {
+      "label": "Tagline (English)",
+      "placeholder": "2D Animator, Graphic Designer & Architecture Student",
+      "maxLength": 200
+    },
+    "taglineAm": {
+      "label": "Tagline (Amharic)",
+      "placeholder": "የአማርኛ መለያ ጽሁፍ",
+      "maxLength": 200
+    },
+    "primaryColor": {
+      "label": "Primary Color",
+      "placeholder": "#D946EF",
+      "hint": "Main brand color — buttons, links, headings"
+    },
+    "secondaryColor": {
+      "label": "Secondary Color",
+      "placeholder": "#3B82F6",
+      "hint": "Accent color — highlights, badges, secondary buttons"
+    },
+    "accentColor": {
+      "label": "Accent Color",
+      "placeholder": "#10B981",
+      "hint": "Tertiary color — success states, decorative elements"
+    },
+    "logoLight": {
+      "label": "Logo (Light Mode)",
+      "placeholder": "/logo.svg or click Upload to add an image",
+      "hint": "Displayed in the header. Recommended: SVG or PNG with transparent background. Ideal size: 120x40px.",
+      "maxSize": 2,
+      "accept": "image/svg+xml,image/png"
+    },
+    "logoDark": {
+      "label": "Logo (Dark Mode)",
+      "placeholder": "/logo-dark.svg or click Upload to add an image",
+      "hint": "Displayed in the header on dark backgrounds. Usually a lighter version of the main logo.",
+      "maxSize": 2,
+      "accept": "image/svg+xml,image/png"
+    },
+    "favicon": {
+      "label": "Favicon",
+      "placeholder": "/favicon.ico or click Upload to add an image",
+      "hint": "Browser tab icon. Use .ico, .png, or .svg format. Recommended size: 32x32px or 16x16px.",
+      "maxSize": 1,
+      "accept": "image/png,image/svg+xml,image/x-icon,image/vnd.microsoft.icon"
+    }
+  },
+  "hero": {
+    "titleEn": {
+      "label": "Hero Title (English)",
+      "placeholder": "Hello, I'm Feven",
+      "hint": "Main heading displayed prominently on the homepage hero section. Keep it short and impactful.",
+      "maxLength": 150
+    },
+    "titleAm": {
+      "label": "Hero Title (Amharic)",
+      "placeholder": "ሰላም፣ እኔ ፌቨን ነኝ",
+      "maxLength": 150
+    },
+    "subtitleEn": {
+      "label": "Subtitle (English)",
+      "placeholder": "I bring stories to life through animation and design...",
+      "maxLength": 300
+    },
+    "subtitleAm": {
+      "label": "Subtitle (Amharic)",
+      "placeholder": "በአኒሜሽን እና ዲዛይን ታሪኮችን ህያው አደርጋለሁ...",
+      "maxLength": 300
+    },
+    "backgroundImage": {
+      "label": "Background Image",
+      "placeholder": "https://res.cloudinary.com/... or click Upload to add an image",
+      "hint": "Full-width background image for the hero section. Recommended: 1920x1080px, JPG or WebP format. Keep file size under 500KB for fast loading.",
+      "maxSize": 5,
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "profilePhoto": {
+      "label": "Profile Photo",
+      "placeholder": "https://res.cloudinary.com/... or click Upload to add a photo",
+      "hint": "Your profile photo displayed in the hero section. Recommended: portrait orientation, at least 400x500px. JPG or PNG format. Leave empty to hide the photo.",
+      "maxSize": 5,
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "ctaPrimaryText": {
+      "label": "Primary Button Text",
+      "placeholder": "View My Work",
+      "maxLength": 50
+    },
+    "ctaPrimaryLink": {
+      "label": "Primary Button Link",
+      "placeholder": "/work"
+    },
+    "ctaSecondaryText": {
+      "label": "Secondary Button Text",
+      "placeholder": "Watch Showreel",
+      "maxLength": 50
+    },
+    "ctaSecondaryLink": {
+      "label": "Secondary Button Link",
+      "placeholder": "/showreel"
+    }
+  },
+  "about": {
+    "profilePhoto": {
+      "label": "Profile Photo",
+      "placeholder": "/images/profile.jpg or click Upload to add a photo",
+      "hint": "Your photo displayed on the About page. Recommended: square aspect ratio, at least 400x400px. JPG or PNG format.",
+      "maxSize": 5,
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "locationEn": {
+      "label": "Location (English)",
+      "placeholder": "Ethiopia",
+      "maxLength": 100
+    },
+    "locationAm": {
+      "label": "Location (Amharic)",
+      "placeholder": "ኢትዮጵያ",
+      "maxLength": 100
+    },
+    "bioEn": {
+      "label": "Bio (English)",
+      "placeholder": "Write your professional bio here...",
+      "hint": "Introduce yourself to visitors. Keep it professional and engaging. Share your journey, passion, and what makes you unique.",
+      "maxLength": 2000
+    },
+    "bioAm": {
+      "label": "Bio (Amharic)",
+      "placeholder": "ስለ ራስዎ ይፃፉ...",
+      "maxLength": 2000
+    },
+    "skillsHeading": {
+      "label": "Skills"
+    },
+    "toolsHeading": {
+      "label": "Tools & Software"
+    },
+    "educationHeading": {
+      "label": "Education"
+    }
+  },
+  "showreel": {
+    "videoUrl": {
+      "label": "Showreel Video URL",
+      "placeholder": "https://youtube.com/watch?v=... or Cloudinary URL",
+      "hint": "Supports YouTube, Vimeo, Google Drive, and Cloudinary video links. This is the main demo reel that plays on the Showreel page."
+    },
+    "posterUrl": {
+      "label": "Video Poster / Thumbnail",
+      "placeholder": "https://res.cloudinary.com/... or click Upload to add an image",
+      "hint": "Image displayed before the video plays. Recommended 16:9 aspect ratio (1280x720px).",
+      "maxSize": 5,
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "titleEn": {
+      "label": "Page Title (English)",
+      "placeholder": "Showreel",
+      "maxLength": 100
+    },
+    "titleAm": {
+      "label": "Page Title (Amharic)",
+      "placeholder": "ሾውሪል",
+      "maxLength": 100
+    },
+    "descriptionEn": {
+      "label": "Description (English)",
+      "placeholder": "A collection of my best animation and motion design work.",
+      "maxLength": 500
+    },
+    "descriptionAm": {
+      "label": "Description (Amharic)",
+      "maxLength": 500
+    }
+  },
+  "process": {
+    "titleEn": {
+      "label": "Page Title (English)",
+      "placeholder": "My Process",
+      "maxLength": 100
+    },
+    "titleAm": {
+      "label": "Page Title (Amharic)",
+      "placeholder": "የስራ ሂደቴ",
+      "maxLength": 100
+    },
+    "subtitleEn": {
+      "label": "Subtitle (English)",
+      "placeholder": "A structured approach to turning ideas into compelling visuals",
+      "maxLength": 400
+    },
+    "subtitleAm": {
+      "label": "Subtitle (Amharic)",
+      "maxLength": 400
+    }
+  },
+  "work": {
+    "titleEn": {
+      "label": "Page Title (English)",
+      "placeholder": "My Work",
+      "maxLength": 100
+    },
+    "titleAm": {
+      "label": "Page Title (Amharic)",
+      "placeholder": "ስራዎቼ",
+      "maxLength": 100
+    },
+    "subtitleEn": {
+      "label": "Subtitle (English)",
+      "placeholder": "Explore my latest projects across animation, design, and architecture.",
+      "maxLength": 400
+    },
+    "subtitleAm": {
+      "label": "Subtitle (Amharic)",
+      "maxLength": 400
+    }
+  },
+  "seo": {
+    "titleTemplate": {
+      "label": "Title Template",
+      "placeholder": "%s | Feven Zerabruk",
+      "hint": "Use %s where the page title should appear. Example: \"About | Feven Zerabruk\"",
+      "maxLength": 150
+    },
+    "defaultDescription": {
+      "label": "Default Meta Description",
+      "placeholder": "Portfolio of Feven Zerabruk, a professional 2D animator...",
+      "maxLength": 160
+    },
+    "ogImage": {
+      "label": "Social Share Image (OG Image)",
+      "placeholder": "https://res.cloudinary.com/... or click Upload to add an image",
+      "hint": "Recommended size: 1200x630px. This image appears when your site is shared on social media.",
+      "maxSize": 5,
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "twitterHandle": {
+      "label": "Twitter/X Handle",
+      "placeholder": "@fevenzerabruk",
+      "maxLength": 50
+    },
+    "googleAnalyticsId": {
+      "label": "Google Analytics ID",
+      "placeholder": "G-XXXXXXXXXX",
+      "hint": "Google Analytics measurement ID for tracking site traffic and visitor behavior.",
+      "maxLength": 20
+    }
+  }
+}

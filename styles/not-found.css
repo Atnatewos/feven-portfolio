@@ -1,0 +1,66 @@
+/* File: styles/not-found.css */
+.not-found-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.not-found-container {
+  max-width: 500px;
+}
+
+.not-found-code {
+  font-size: clamp(80px, 15vw, 160px);
+  font-weight: 800;
+  color: var(--color-primary, #6366F1);
+  line-height: 1;
+  margin-bottom: var(--space-4);
+  animation: float 4s ease-in-out infinite;
+}
+
+.not-found-title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text, #1A1530);
+  margin-bottom: var(--space-4);
+}
+
+.not-found-description {
+  font-size: var(--text-lg);
+  color: var(--color-textSecondary, #8B7E74);
+  margin-bottom: var(--space-8);
+  line-height: var(--leading-relaxed);
+}
+
+.not-found-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: var(--color-primary, #6366F1);
+  color: #FFFFFF;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--text-base);
+  min-height: 48px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.not-found-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.not-found-button:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}

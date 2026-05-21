@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "id": "work", "label": "Work", "href": "/work", "visible": true },
+    { "id": "showreel", "label": "Showreel", "href": "/showreel", "visible": true },
+    { "id": "about", "label": "About", "href": "/about", "visible": true },
+    { "id": "process", "label": "Process", "href": "/process", "visible": true },
+    { "id": "blog", "label": "Blog", "href": "/blog", "visible": true },
+    { "id": "contact", "label": "Contact", "href": "/contact", "visible": true }
+  ],
+  "mobileMenu": {
+    "openLabel": "Toggle navigation menu",
+    "ariaExpanded": "Navigation menu"
+  }
+}

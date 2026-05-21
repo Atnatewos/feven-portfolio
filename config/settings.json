@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "titleEn": {
+      "label": "Hero Title (English)",
+      "placeholder": "Hello, I'm Feven",
+      "hint": "Main heading displayed prominently on the homepage hero section. Keep it short and impactful.",
+      "maxLength": 150
+    },
+    "titleAm": {
+      "label": "Hero Title (Amharic)",
+      "placeholder": "ሰላም፣ እኔ ፌቨን ነኝ",
+      "maxLength": 150
+    },
+    "subtitleEn": {
+      "label": "Subtitle (English)",
+      "placeholder": "I bring stories to life through animation and design...",
+      "maxLength": 300
+    },
+    "subtitleAm": {
+      "label": "Subtitle (Amharic)",
+      "placeholder": "በአኒሜሽን እና ዲዛይን ታሪኮችን ህያው አደርጋለሁ...",
+      "maxLength": 300
+    },
+    "backgroundImage": {
+      "label": "Background Image",
+      "placeholder": "https://res.cloudinary.com/... or click Upload to add an image",
+      "hint": "Full-width background image for the hero section. Recommended: 1920x1080px, JPG or WebP format. Keep file size under 500KB for fast loading.",
+      "maxSize": 5,
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "profilePhoto": {
+      "label": "Profile Photo",
+      "placeholder": "https://res.cloudinary.com/... or click Upload to add a photo",
+      "hint": "Your profile photo displayed in the hero section. Recommended: portrait orientation, at least 400x500px. JPG or PNG format. Leave empty to hide the photo.",
+      "maxSize": 5,
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "ctaPrimaryText": {
+      "label": "Primary Button Text",
+      "placeholder": "View My Work",
+      "maxLength": 50
+    },
+    "ctaPrimaryLink": {
+      "label": "Primary Button Link",
+      "placeholder": "/work"
+    },
+    "ctaSecondaryText": {
+      "label": "Secondary Button Text",
+      "placeholder": "Get In Touch",
+      "maxLength": 50
+    },
+    "ctaSecondaryLink": {
+      "label": "Secondary Button Link",
+      "placeholder": "/contact"
+    }
+  }
+}

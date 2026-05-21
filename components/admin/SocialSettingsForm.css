@@ -1,0 +1,45 @@
+/* File: components/admin/SocialSettingsForm.css */
+.social-settings-card {
+  background: var(--admin-bg-elevated, #F3F1FA);
+  border: 1px solid var(--admin-border, #E2DEF0);
+  border-radius: var(--admin-radius-lg, 16px);
+  padding: var(--space-5, 20px);
+  margin-bottom: var(--space-2, 8px);
+  transition: border-color 200ms ease;
+}
+
+.social-settings-card:hover {
+  border-color: var(--admin-primary, #6366F1);
+}
+
+.social-settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 12px);
+  margin-bottom: var(--space-4, 16px);
+}
+
+.social-settings-card-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 40px;
+  text-align: center;
+}
+
+.social-settings-card-title-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.social-settings-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: var(--admin-text, #2D2640);
+}
+
+.social-settings-card-help {
+  font-size: 12px;
+  color: var(--admin-text-muted, #9B95AD);
+  line-height: 1.4;
+}

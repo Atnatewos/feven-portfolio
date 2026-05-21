@@ -1,0 +1,6 @@
+{
+  "defaultLanguage": "en",
+  "supportedLanguages": ["en", "am"],
+  "fallbackLanguage": "en",
+  "translationsPath": "./i18n"
+}

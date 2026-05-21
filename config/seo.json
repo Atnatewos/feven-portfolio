@@ -1,0 +1,11 @@
+{
+  "titleTemplate": { "en": "%s | {siteName}", "am": "%s | {siteName}" },
+  "defaultDescription": {
+    "en": "Portfolio of {siteName}, a professional animator, graphic designer, and architect based in Ethiopia.",
+    "am": "የ{siteName} ፖርትፎሊዮ፣ በኢትዮጵያ የተመሰረተ ፕሮፌሽናል አኒሜተር፣ ግራፊክ ዲዛይነር እና አርክቴክት።"
+  },
+  "ogImage": "",
+  "twitterHandle": "",
+  "googleAnalyticsId": "",
+  "locale": "en_US"
+}

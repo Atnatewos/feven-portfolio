@@ -1,0 +1,427 @@
+/* File: components/sections/Hero.css — COMPLETE REPLACEMENT */
+/* ================================================================== */
+/*  Hero — Dark Cyberpunk, Left/Right Split, Neon Glows, 3D Frame     */
+/* ================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(217, 70, 239, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(0, 255, 204, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+    var(--color-background, #0B0B16);
+  padding: calc(var(--header-height, 72px) + var(--space-8, 32px)) var(--space-6, 24px) var(--space-12, 48px);
+  overflow: hidden;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width, 1280px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Grid — Always Left/Right Split. Left stays even without photo.    */
+/* ------------------------------------------------------------------ */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12, 48px);
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--space-12, 48px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Left Column                                                        */
+/* ------------------------------------------------------------------ */
+.hero-left {
+  animation: heroSlideLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.hero-tags {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 12px);
+  margin-bottom: var(--space-5, 20px);
+  flex-wrap: wrap;
+}
+
+.hero-tag {
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: var(--space-1, 4px) var(--space-3, 12px);
+  border-radius: var(--radius-full, 9999px);
+  border: 1px solid transparent;
+}
+
+.hero-tag-animation {
+  color: var(--color-animation, #00FFCC);
+  border-color: rgba(0, 255, 204, 0.3);
+  background: rgba(0, 255, 204, 0.08);
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.15);
+}
+
+.hero-tag-architecture {
+  color: var(--color-architecture, #00D2FF);
+  border-color: rgba(0, 210, 255, 0.3);
+  background: rgba(0, 210, 255, 0.08);
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.15);
+}
+
+.hero-tag-design {
+  color: var(--color-design, #D946EF);
+  border-color: rgba(217, 70, 239, 0.3);
+  background: rgba(217, 70, 239, 0.08);
+  box-shadow: 0 0 12px rgba(217, 70, 239, 0.15);
+}
+
+.hero-tag-separator {
+  color: var(--color-text-muted, #6B7280);
+  font-weight: var(--weight-light);
+}
+
+.hero-greeting {
+  font-size: var(--text-lg, 1.125rem);
+  color: var(--color-text-muted, #6B7280);
+  margin-bottom: var(--space-3, 12px);
+  letter-spacing: 0.3px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: var(--weight-extrabold);
+  color: var(--color-text, #FFFFFF);
+  line-height: 1.08;
+  margin-bottom: var(--space-6, 24px);
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: var(--text-lg, 1.125rem);
+  color: var(--color-text-secondary, #A5B4FC);
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: var(--space-8, 32px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Filter Pills                                                       */
+/* ------------------------------------------------------------------ */
+.hero-filter-pills {
+  display: flex;
+  gap: var(--space-3, 12px);
+  margin-bottom: var(--space-8, 32px);
+  flex-wrap: wrap;
+}
+
+.hero-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2, 8px) var(--space-5, 20px);
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border-radius: var(--radius-full, 9999px);
+  border: 1.5px solid transparent;
+  text-decoration: none;
+  min-height: 40px;
+  transition: all var(--transition-base);
+}
+
+.hero-filter-pill-animation {
+  color: var(--color-animation, #00FFCC);
+  border-color: rgba(0, 255, 204, 0.5);
+  background: rgba(0, 255, 204, 0.06);
+}
+
+.hero-filter-pill-animation:hover {
+  background: rgba(0, 255, 204, 0.15);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3), 0 0 40px rgba(0, 255, 204, 0.1);
+  transform: translateY(-2px);
+}
+
+.hero-filter-pill-architecture {
+  color: var(--color-architecture, #00D2FF);
+  border-color: rgba(0, 210, 255, 0.5);
+  background: rgba(0, 210, 255, 0.06);
+}
+
+.hero-filter-pill-architecture:hover {
+  background: rgba(0, 210, 255, 0.15);
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.3), 0 0 40px rgba(0, 210, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.hero-filter-pill-design {
+  color: var(--color-design, #D946EF);
+  border-color: rgba(217, 70, 239, 0.5);
+  background: rgba(217, 70, 239, 0.06);
+}
+
+.hero-filter-pill-design:hover {
+  background: rgba(217, 70, 239, 0.15);
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.3), 0 0 40px rgba(217, 70, 239, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  CTA Buttons                                                        */
+/* ------------------------------------------------------------------ */
+.hero-actions {
+  display: flex;
+  gap: var(--space-4, 16px);
+  flex-wrap: wrap;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Right Column — Profile Photo with 3D Partial-Frame Border          */
+/*                                                                     */
+/*  Border covers TOP and RIGHT sides only.                            */
+/*  Bottom and left are open, allowing the image to extend beyond      */
+/*  the frame for a floating 3D effect.                                */
+/*  When no photo is set, the right column is empty but the grid       */
+/*  keeps its two-column structure so left content stays in place.     */
+/* ------------------------------------------------------------------ */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: heroSlideRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.hero-avatar-frame {
+  position: relative;
+  width: clamp(280px, 35vw, 400px);
+  height: clamp(320px, 38vw, 440px);
+  overflow: visible;
+}
+
+/*
+ * Glow effect positioned at the top-right corner.
+ * Creates a 3D light source coming from that direction.
+ */
+.hero-avatar-glow {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(
+    ellipse at top right,
+    var(--color-design-glow, rgba(217, 70, 239, 0.5)),
+    transparent 70%
+  );
+  filter: blur(12px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/*
+ * The image wrapper has borders only on the TOP and RIGHT.
+ * Bottom and left are open — the image extends beyond those edges.
+ */
+.hero-avatar-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: visible;
+  border-top: 3px solid rgba(217, 70, 239, 0.6);
+  border-right: 3px solid rgba(217, 70, 239, 0.6);
+  box-shadow:
+    8px -8px 30px rgba(217, 70, 239, 0.2),
+    4px -4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: box-shadow var(--transition-slow);
+}
+
+.hero-avatar-image-wrapper:hover {
+  box-shadow:
+    12px -12px 40px rgba(217, 70, 239, 0.35),
+    6px -6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+  border-radius: 20px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Bottom CTA Bar (Glassmorphism)                                     */
+/* ------------------------------------------------------------------ */
+.hero-cta-bar {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: 0.4s;
+  background: rgba(21, 21, 38, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-2xl, 24px);
+  padding: var(--space-5, 20px) var(--space-8, 32px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.hero-cta-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6, 24px);
+  flex-wrap: wrap;
+}
+
+.hero-cta-bar-text {
+  font-size: var(--text-base, 1rem);
+  color: var(--color-text-secondary, #A5B4FC);
+  font-weight: var(--weight-medium);
+  flex: 1;
+  min-width: 200px;
+  letter-spacing: 0.2px;
+}
+
+.hero-cta-bar-play-icon {
+  font-size: 14px;
+  margin-right: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Scroll Indicator                                                   */
+/* ------------------------------------------------------------------ */
+.hero-scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3, 12px);
+  margin-top: var(--space-10, 40px);
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: 0.6s;
+}
+
+.hero-scroll-text {
+  font-size: var(--text-xs, 0.65rem);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted, #6B7280);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary, #D946EF),
+    transparent
+  );
+  animation: scrollLinePulse 2s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Animations                                                         */
+/* ------------------------------------------------------------------ */
+@keyframes heroSlideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes heroSlideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollLinePulse {
+  0%, 100% { opacity: 0.3; height: 40px; }
+  50% { opacity: 1; height: 50px; }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Responsive                                                         */
+/* ------------------------------------------------------------------ */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8, 32px);
+    text-align: center;
+  }
+
+  .hero-left {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-right {
+    order: 1;
+  }
+
+  .hero-avatar-frame {
+    width: 200px;
+    height: 240px;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-tags {
+    justify-content: center;
+  }
+
+  .hero-filter-pills {
+    justify-content: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: calc(var(--header-height, 72px) + var(--space-4, 16px)) var(--space-4, 16px) var(--space-8, 32px);
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-avatar-frame {
+    width: 160px;
+    height: 190px;
+  }
+
+  .hero-cta-bar-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-cta-bar-text {
+    min-width: 0;
+  }
+}

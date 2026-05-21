@@ -1,0 +1,17 @@
+{
+  "routes": {
+    "admin": {
+      "prefix": "/admin",
+      "login": "/admin/login"
+    },
+    "public": {
+      "home": "/",
+      "work": "/work",
+      "showreel": "/showreel",
+      "about": "/about",
+      "process": "/process",
+      "blog": "/blog",
+      "contact": "/contact"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "pageTitle": { "en": "About Me", "am": "ስለ እኔ" },
+  "profilePhoto": "/images/profile.jpg",
+  "profilePhotoAlt": { "en": "Photo of Feven Zerabruk", "am": "የፌቨን ዘራብሩክ ፎቶ" },
+  "bio": {
+    "en": "",
+    "am": ""
+  },
+  "location": {
+    "en": "Ethiopia",
+    "am": "ኢትዮጵያ"
+  },
+  "taglines": {
+    "en": ["Animator", "Graphic Designer", "Architect"],
+    "am": ["አኒሜተር", "ግራፊክ ዲዛይነር", "አርክቴክት"]
+  },
+  "taglineSeparator": "•",
+  "skillsHeading": { "en": "Skills & Expertise", "am": "ችሎታዎች እና እውቀት" },
+  "skills": ["2D Animation", "Character Design", "Motion Graphics", "Sound Design"], 
+  "toolsHeading": { "en": "Tools & Software", "am": "መሳሪያዎች እና ሶፍትዌር" },
+  "tools": ["After Effects", "Illustrator", "Photoshop", "Toon Boom"],
+  "educationHeading": { "en": "Education", "am": "ትምህርት" },
+  "education": [],
+  "ctaPrimary": {
+    "text": { "en": "View My Work", "am": "ስራዎቼን ተመልከት" },
+    "link": "/work"
+  },
+  "ctaSecondary": {
+    "text": { "en": "Get In Touch", "am": "አግኙኝ" },
+    "link": "/contact"
+  }
+}

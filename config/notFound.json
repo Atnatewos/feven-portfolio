@@ -1,0 +1,9 @@
+{
+  "code": "404",
+  "title": { "en": "Page Not Found", "am": "ገጽ አልተገኘም" },
+  "description": {
+    "en": "The page or resource you're looking for doesn't exist.",
+    "am": "የሚፈልጉት ገጽ ወይም ምንጭ የለም።"
+  },
+  "buttonText": { "en": "Go Home", "am": "ወደ መነሻ ይመለሱ" }
+}

@@ -1,0 +1,75 @@
+/* File: components/admin/ImageUploadField.css */
+.image-upload-field {
+  margin-bottom: 0;
+}
+
+.image-upload-field-row {
+  display: flex;
+  gap: var(--space-2, 8px);
+  align-items: center;
+}
+
+.image-upload-field-input {
+  flex: 1;
+}
+
+.image-upload-field-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.image-upload-field-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 12px);
+  margin-top: var(--space-3, 12px);
+}
+
+.image-upload-field-progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--admin-bg, #F8F7FC);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.image-upload-field-progress-fill {
+  height: 100%;
+  background: var(--admin-primary, #6366F1);
+  border-radius: 3px;
+  transition: width 300ms ease;
+}
+
+.image-upload-field-progress-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--admin-text-muted, #9B95AD);
+  min-width: 36px;
+  text-align: right;
+}
+
+.image-upload-field-error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1, 4px);
+  margin-top: var(--space-2, 8px);
+  font-size: 12px;
+  color: var(--admin-error, #EF4444);
+  font-weight: 500;
+}
+
+.image-upload-field-preview {
+  margin-top: var(--space-3, 12px);
+  border: 1px solid var(--admin-border, #E2DEF0);
+  border-radius: var(--admin-radius-sm, 8px);
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.image-upload-field-preview-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}

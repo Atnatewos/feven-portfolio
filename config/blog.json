@@ -1,0 +1,19 @@
+{
+  "pageTitle": { "en": "Blog", "am": "ብሎግ" },
+  "subtitle": {
+    "en": "Thoughts, tutorials, and behind-the-scenes stories",
+    "am": "ሀሳቦች፣ ትምህርቶች እና ከትዕይንት በስተጀርባ ታሪኮች"
+  },
+  "readMore": { "en": "Read More →", "am": "ተጨማሪ ያንብቡ →" },
+  "backToBlog": { "en": "← Back to Blog", "am": "← ወደ ብሎግ ተመለስ" },
+  "shareLabel": { "en": "Share this post:", "am": "ይህን ልጥፍ አጋራ:" },
+  "copyLink": { "en": "📋 Copy Link", "am": "📋 ሊንክ ቅዳ" },
+  "noPosts": { "en": "No blog posts yet. Check back soon!", "am": "እስካሁን ምንም ብሎግ የለም። በቅርቡ ይመለሱ!" },
+  "filterAllLabel": { "en": "All Posts", "am": "ሁሉም ልጥፎች" },
+  "categories": [
+    { "id": "animation", "label": { "en": "Animation", "am": "አኒሜሽን" } },
+    { "id": "design", "label": { "en": "Design", "am": "ዲዛይን" } },
+    { "id": "architecture", "label": { "en": "Architecture", "am": "አርክቴክቸር" } },
+    { "id": "tutorial", "label": { "en": "Tutorials", "am": "ትምህርቶች" } }
+  ]
+}

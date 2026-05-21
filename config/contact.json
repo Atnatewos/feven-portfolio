@@ -1,0 +1,29 @@
+{
+  "pageTitle": { "en": "Get In Touch", "am": "አግኙኝ" },
+  "subtitle": {
+    "en": "Have a project in mind? Let's work together to bring your ideas to life.",
+    "am": "ፕሮጀክት አለዎት? ሀሳብዎን ወደ ህይወት ለማምጣት አብረን እንስራ።"
+  },
+  "emailLabel": { "en": "Email", "am": "ኢሜይል" },
+  "locationLabel": { "en": "Location", "am": "አድራሻ" },
+  "form": {
+    "nameLabel": { "en": "Name *", "am": "ስም *" },
+    "namePlaceholder": { "en": "Your name", "am": "ሙሉ ስምዎ" },
+    "emailLabel": { "en": "Email *", "am": "ኢሜይል *" },
+    "emailPlaceholder": { "en": "your@email.com", "am": "ኢሜይልዎ" },
+    "messageLabel": { "en": "Message *", "am": "መልእክት *" },
+    "messagePlaceholder": { "en": "Tell me about your project ...", "am": "ስለ ፕሮጀክትዎ ይንገሩኝ..." },
+    "submitText": { "en": "Send Message", "am": "መልእክት ላክ" },
+    "sendingText": { "en": "Sending...", "am": "በመላክ ላይ..." },
+    "successMessage": { "en": "Thank you! Your message has been sent successfully.", "am": "አመሰግናለሁ! መልእክትዎ በተሳካ ሁኔታ ተልኳል።" },
+    "errorMessage": { "en": "Failed to send message. Please try again or email directly.", "am": "መልእክት መላክ አልተሳካም። እባክዎ እንደገና ይሞክሩ ወይም በቀጥታ ኢሜይል ያድርጉ።" },
+    "validation": {
+      "nameRequired": { "en": "Name is required", "am": "ስም ያስፈልጋል" },
+      "nameMinLength": { "en": "Name must be at least 2 characters", "am": "ስም ቢያንስ 2 ቁምፊዎች መሆን አለበት" },
+      "emailRequired": { "en": "Email is required", "am": "ኢሜይል ያስፈልጋል" },
+      "emailInvalid": { "en": "Please enter a valid email address", "am": "እባክዎ ትክክለኛ ኢሜይል ያስገቡ" },
+      "messageRequired": { "en": "Message is required", "am": "መልእክት ያስፈልጋል" },
+      "messageMinLength": { "en": "Sorry: Message must be at least 10 characters", "am": "ይቅርታ፡ መልእክትዎ ቢያንስ 10 ፊደል መሆን አለበት" }
+    }
+  }
+}

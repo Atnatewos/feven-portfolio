@@ -1,0 +1,152 @@
+/* ==========================================================================\
+   ABYSSINIA DESIGN SYSTEM - KINETIC & 3D MOTION ENGINE
+   Project: Feven Portfolio (Animation, Graphic Design, Architecture)
+   ========================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* 1. Primitives & Physics Easing Interpolations                     */
+/* ------------------------------------------------------------------ */
+:root {
+  /* High-velocity cinematic instant snap */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  /* Character animation squash & stretch snap back */
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Clean structural grid alignment / non-linear path */
+  --ease-structural: cubic-bezier(0.76, 0, 0.24, 1);
+  /* Organic fluid panoramic canvas glide */
+  --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. Core Keyframe Architecture Matrix                              */
+/* ------------------------------------------------------------------ */
+
+/* Smooth opacity reveal */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Hard structural vertical reveal (Unfurls like drafting trace blueprints) */
+@keyframes structural-reveal {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+/* Clipping mask expansion across horizontal plain */
+@keyframes blueprint-unfurl {
+  0% { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+
+/* High-velocity kinetic entrance mapping for elements */
+@keyframes elastic-entrance {
+  0% {
+    transform: scale(0.4) translateY(60px);
+    opacity: 0;
+  }
+  45% {
+    transform: scale(1.05) translateY(-6px);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(0.98) translateY(2px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 3D Typographic slide up from hidden boundary container */
+@keyframes text-slide-up {
+  0% {
+    transform: translateY(105%) rotateX(-12deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* Continuous micro-pulse loop for active indicators and media buttons */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(146, 27, 29, 0.5);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 14px rgba(146, 27, 29, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(146, 27, 29, 0);
+  }
+}
+
+/* Micro squash and stretch feedback click pulse */
+@keyframes click-bounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(0.88, 1.15); }
+  60% { transform: scale(1.12, 0.85); }
+  100% { transform: scale(1); }
+}
+
+/* Continuous background perspective grid float */
+@keyframes float-spatial {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(0.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. Global Orchestration & Utility Hooks                          */
+/* ------------------------------------------------------------------ */
+
+.reveal-overflow-box {
+  overflow: hidden;
+  display: block;
+  perspective: 1000px;
+}
+
+/* Base state initialization for staggered groups */
+.sequence-trigger > * {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Triggered reveal class handled natively via interaction or intersection hooks */
+.sequence-trigger.active > *,
+.sequence-trigger-auto > * {
+  animation: text-slide-up 0.85s var(--ease-out-expo) forwards;
+}
+
+/* Infinite procedural delay grid mapping (100ms iterations) */
+.sequence-trigger.active > *:nth-child(1), .sequence-trigger-auto > *:nth-child(1) { animation-delay: 0.05s; }
+.sequence-trigger.active > *:nth-child(2), .sequence-trigger-auto > *:nth-child(2) { animation-delay: 0.15s; }
+.sequence-trigger.active > *:nth-child(3), .sequence-trigger-auto > *:nth-child(3) { animation-delay: 0.25s; }
+.sequence-trigger.active > *:nth-child(4), .sequence-trigger-auto > *:nth-child(4) { animation-delay: 0.35s; }
+.sequence-trigger.active > *:nth-child(5), .sequence-trigger-auto > *:nth-child(5) { animation-delay: 0.45s; }
+.sequence-trigger.active > *:nth-child(6), .sequence-trigger-auto > *:nth-child(6) { animation-delay: 0.55s; }
+
+/* ------------------------------------------------------------------ */
+/* 4. Motion Reductions Matrix (Accessibility Core)                 */
+/* ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .sequence-trigger > *,
+  .sequence-trigger-auto > *,
+  .animate-elastic {
+    animation: fadeIn 0.4s ease forwards !important;
+    transform: none !important;
+    transition: opacity 0.2s ease !important;
+  }
+}

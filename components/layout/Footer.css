@@ -1,0 +1,34 @@
+.footer {
+  background-color: var(--color-surface);
+  border-top: var(--border-thin) solid var(--color-border);
+  padding: var(--space-12) 0;
+  margin-top: var(--space-20);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.footer-social-link {
+  color: var(--color-text-secondary);
+  text-transform: capitalize;
+  transition: color var(--transition-fast);
+}
+
+.footer-social-link:hover {
+  color: var(--color-primary);
+}
+
+.footer-copyright {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin: 0;
+}

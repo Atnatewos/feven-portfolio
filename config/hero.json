@@ -1,0 +1,127 @@
+{
+  "greeting": {
+    "en": "Hello, I'm",
+    "am": "ሰላም፣ እኔ"
+  },
+  "title": {
+    "en": "",
+    "am": ""
+  },
+  "subtitle": {
+    "en": "",
+    "am": ""
+  },
+  "backgroundImage": "public/images/feven-hero-background.png",
+  "profilePhoto": "",
+  "profilePhotoAlt": {
+    "en": "Profile photo",
+    "am": "የመገለጫ ፎቶ"
+  },
+  "ctaPrimary": {
+    "text": {
+      "en": "View My Work",
+      "am": "ስራዎቼን ተመልከት"
+    },
+    "link": "/work"
+  },
+  "ctaSecondary": {
+    "text": {
+      "en": "Watch Showreel",
+      "am": "ሾውሪል ተመልከት"
+    },
+    "link": "/showreel"
+  },
+  "sections": [
+    {
+      "id": "about",
+      "icon": "👤",
+      "label": {
+        "en": "About Me",
+        "am": "ስለ እኔ"
+      },
+      "description": {
+        "en": "2D Animator, Graphic Designer & Architecture Student passionate about bringing stories to life.",
+        "am": "2D አኒሜተር፣ ግራፊክ ዲዛይነር እና አርክቴክቸር ተማሪ ታሪኮችን ህያው ማድረግ የምወድ።"
+      },
+      "link": "/about",
+      "visible": true
+    },
+    {
+      "id": "showreel",
+      "icon": "🎥",
+      "label": {
+        "en": "Showreel",
+        "am": "ሾውሪል"
+      },
+      "description": {
+        "en": "Watch my latest animation and motion design work in action.",
+        "am": "የቅርብ ጊዜ የአኒሜሽን እና የሞሽን ዲዛይን ስራዬን ይመልከቱ።"
+      },
+      "link": "/showreel",
+      "visible": true
+    },
+    {
+      "id": "work",
+      "icon": "🎬",
+      "label": {
+        "en": "My Work",
+        "am": "ስራዎቼ"
+      },
+      "description": {
+        "en": "Explore my portfolio of animation, graphic design, and architecture projects.",
+        "am": "የአኒሜሽን፣ የግራፊክ ዲዛይን እና የአርክቴክቸር ፕሮጀክቶቼን ይመልከቱ።"
+      },
+      "link": "/work",
+      "visible": true
+    },
+    {
+      "id": "process",
+      "icon": "🔄",
+      "label": {
+        "en": "My Process",
+        "am": "የስራ ሂደቴ"
+      },
+      "description": {
+        "en": "See how I approach creative projects from concept to final delivery.",
+        "am": "ከሀሳብ እስከ ማጠናቀቅ የፈጠራ ስራዎችን እንዴት እንደምሰራ ይመልከቱ።"
+      },
+      "link": "/process",
+      "visible": true
+    },
+    {
+      "id": "blog",
+      "icon": "📝",
+      "label": {
+        "en": "Blog",
+        "am": "ብሎግ"
+      },
+      "description": {
+        "en": "Read my thoughts, tutorials, and behind-the-scenes stories about animation and design.",
+        "am": "ስለ አኒሜሽን እና ዲዛይን ሀሳቦቼን፣ ትምህርቶቼን እና ከትዕይንት በስተጀርባ ታሪኮቼን ያንብቡ።"
+      },
+      "link": "/blog",
+      "visible": true
+    },
+    {
+      "id": "contact",
+      "icon": "📧",
+      "label": {
+        "en": "Contact Me",
+        "am": "አግኙኝ"
+      },
+      "description": {
+        "en": "Have a project in mind? Let's work together to bring your ideas to life.",
+        "am": "ፕሮጀክት አለዎት? ሀሳብዎን ወደ ህይወት ለማምጣት አብረን እንስራ።"
+      },
+      "link": "/contact",
+      "visible": true
+    }
+  ],
+  "scrollIndicator": {
+    "visible": true,
+    "text": {
+      "en": "Scroll to explore",
+      "am": "ለማሰስ ያንሸራትቱ"
+    }
+  }
+}

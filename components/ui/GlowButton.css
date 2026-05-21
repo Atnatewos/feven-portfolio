@@ -1,0 +1,148 @@
+/* File: components/ui/GlowButton.css */
+.glow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2, 8px);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-semibold);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-full, 9999px);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.3px;
+}
+
+.glow-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Sizes */
+.glow-btn-sm {
+  padding: var(--space-2, 8px) var(--space-4, 16px);
+  font-size: var(--text-xs, 0.75rem);
+  min-height: 36px;
+}
+
+.glow-btn-md {
+  padding: var(--space-3, 12px) var(--space-6, 24px);
+  font-size: var(--text-sm, 0.875rem);
+  min-height: 44px;
+}
+
+.glow-btn-lg {
+  padding: var(--space-4, 16px) var(--space-8, 32px);
+  font-size: var(--text-base, 1rem);
+  min-height: 52px;
+}
+
+/* Primary — Neon Magenta */
+.glow-btn-primary {
+  background: rgba(217, 70, 239, 0.15);
+  border-color: rgba(217, 70, 239, 0.5);
+  color: #D946EF;
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.25);
+}
+
+.glow-btn-primary:hover:not(:disabled) {
+  background: rgba(217, 70, 239, 0.25);
+  border-color: #D946EF;
+  box-shadow: 0 0 30px rgba(217, 70, 239, 0.5), 0 0 60px rgba(217, 70, 239, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Secondary — Electric Cyan */
+.glow-btn-secondary {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: #3B82F6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.25);
+}
+
+.glow-btn-secondary:hover:not(:disabled) {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: #3B82F6;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.5), 0 0 60px rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Accent — Mint Green */
+.glow-btn-accent {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #10B981;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+}
+
+.glow-btn-accent:hover:not(:disabled) {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: #10B981;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.5), 0 0 60px rgba(16, 185, 129, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Animation — Bright Teal */
+.glow-btn-animation {
+  background: rgba(0, 255, 204, 0.12);
+  border-color: rgba(0, 255, 204, 0.5);
+  color: #00FFCC;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.glow-btn-animation:hover:not(:disabled) {
+  background: rgba(0, 255, 204, 0.22);
+  border-color: #00FFCC;
+  box-shadow: 0 0 35px rgba(0, 255, 204, 0.5), 0 0 70px rgba(0, 255, 204, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Architecture — Sky Blue */
+.glow-btn-architecture {
+  background: rgba(0, 210, 255, 0.12);
+  border-color: rgba(0, 210, 255, 0.5);
+  color: #00D2FF;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.glow-btn-architecture:hover:not(:disabled) {
+  background: rgba(0, 210, 255, 0.22);
+  border-color: #00D2FF;
+  box-shadow: 0 0 35px rgba(0, 210, 255, 0.5), 0 0 70px rgba(0, 210, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Design — Neon Magenta */
+.glow-btn-design {
+  background: rgba(217, 70, 239, 0.12);
+  border-color: rgba(217, 70, 239, 0.5);
+  color: #D946EF;
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.3);
+}
+
+.glow-btn-design:hover:not(:disabled) {
+  background: rgba(217, 70, 239, 0.22);
+  border-color: #D946EF;
+  box-shadow: 0 0 35px rgba(217, 70, 239, 0.5), 0 0 70px rgba(217, 70, 239, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Outline variant — transparent with glow border */
+.glow-btn-outline {
+  background: transparent;
+  border-color: var(--color-border-light, #323260);
+  color: var(--color-text-secondary, #A5B4FC);
+  box-shadow: none;
+}
+
+.glow-btn-outline:hover:not(:disabled) {
+  border-color: var(--color-primary, #D946EF);
+  color: var(--color-primary, #D946EF);
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.2);
+  transform: translateY(-2px);
+}
