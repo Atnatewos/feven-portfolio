@@ -4,23 +4,65 @@ import { getBranding, getConfig } from '@/lib/config';
 
 export const dynamic = 'force-dynamic';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://fevenzerabruk.vercel.app';
 
+/**
+ * Production-Grade Dynamic SEO & Open Graph Metadata Generator
+ * Combines configuration-driven variables with rigid social media preview structures.
+ */
 export async function generateMetadata() {
   const branding = getBranding();
+  const titleText = branding.siteName || 'Feven Zerabruk | Professional 2D Animator & Designer';
+  const descriptionText = branding.taglineEn || 'Portfolio of Feven Zerabruk, specializing in high-end visual storytelling, 2D animation, and graphic design.';
+
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: branding.siteName || 'Portfolio',
+      default: titleText,
       template: `%s | ${branding.siteName || 'Portfolio'}`,
     },
-    description: branding.taglineEn || '',
+    description: descriptionText,
     icons: {
       icon: branding.favicon || '/favicon.ico',
       apple: '/apple-touch-icon.png',
     },
     manifest: '/site.webmanifest',
-    robots: { index: true, follow: true },
+    
+    // Open Graph Engine (Telegram, WhatsApp, LinkedIn, Meta)
+    openGraph: {
+      title: titleText,
+      description: descriptionText,
+      url: SITE_URL,
+      siteName: branding.siteName || 'Feven Zerabruk Portfolio',
+      images: [
+        {
+          url: '/opengraph-image.png', // Resolves cleanly to public/opengraph-image.png
+          width: 1200,
+          height: 630,
+          alt: `${titleText} Visual Showcase Preview Banner`,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+
+    // Twitter / X Layout Rule Card Configuration
+    twitter: {
+      card: 'summary_large_image',
+      title: titleText,
+      description: descriptionText,
+      images: ['/opengraph-image.png'],
+    },
+
+    robots: { 
+      index: true, 
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+      }
+    },
   };
 }
 
@@ -30,9 +72,6 @@ export async function generateMetadata() {
  * Applies the Abyssinia dark cyberpunk theme via CSS custom properties
  * read from config/branding.json. Every color, font, and design token
  * flows from the config through CSS variables on <body>.
- *
- * The body background uses the deep navy canvas color (#0B0B16)
- * with subtle radial gradient overlays for depth.
  */
 export default function RootLayout({ children }) {
   const branding = getBranding();
