@@ -6,7 +6,9 @@ import { getBlogPostBySlug } from '@/lib/data';
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }) {
-  const post = await getBlogPostBySlug(params.slug);
+  // Explicitly await the async params object required by Next.js 15+ / 16+
+  const resolvedParams = await params;
+  const post = await getBlogPostBySlug(resolvedParams.slug);
   if (!post) return { title: 'Post Not Found' };
 
   return {
@@ -16,7 +18,9 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const post = await getBlogPostBySlug(params.slug);
+  // Explicitly await the async params object before querying database parameters
+  const resolvedParams = await params;
+  const post = await getBlogPostBySlug(resolvedParams.slug);
   if (!post) notFound();
 
   return <BlogPost post={post} />;

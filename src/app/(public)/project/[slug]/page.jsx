@@ -6,7 +6,9 @@ import { getProjectBySlug } from '@/lib/data';
 export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }) {
-  const project = await getProjectBySlug(params.slug);
+  // Explicitly await the async params object required by Next.js 15+ / 16+
+  const resolvedParams = await params;
+  const project = await getProjectBySlug(resolvedParams.slug);
   if (!project) return { title: 'Project Not Found' };
 
   return {
@@ -16,7 +18,9 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ProjectPage({ params }) {
-  const project = await getProjectBySlug(params.slug);
+  // Explicitly await the async params object before querying database parameters
+  const resolvedParams = await params;
+  const project = await getProjectBySlug(resolvedParams.slug);
   if (!project) notFound();
 
   return <ProjectDetail project={project} />;
