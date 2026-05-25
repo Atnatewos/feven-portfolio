@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      // 1. Root folder components fallback mappings
       "@/components/*": ["./components/*"],
       "@/lib/*": ["./lib/*"],
       "@/config/*": ["./config/*"],
-      "@/styles/*": ["./styles/*"]
+      "@/styles/*": ["./styles/*"],
+      
+      // 2. Main src folder layout mapping fallback
+      "@/*": ["./src/*", "./*"]
     }
-  }
+  },
+  "exclude": ["node_modules", ".next", "out"]
 }

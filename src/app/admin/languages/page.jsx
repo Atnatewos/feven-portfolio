@@ -3,8 +3,8 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Sidebar from '../../../components/admin/Sidebar';
-import LanguageEditor from '../../../components/admin/LanguageEditor';
+import Sidebar from '@/components/admin/Sidebar';
+import LanguageEditor from '@/components/admin/LanguageEditor';
 
 /**
  * Admin languages page
