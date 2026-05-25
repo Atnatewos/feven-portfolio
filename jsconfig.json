@@ -7,13 +7,10 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      // 1. Root folder components fallback mappings
-      "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/config/*": ["./config/*"],
-      "@/styles/*": ["./styles/*"],
-      
-      // 2. Main src folder layout mapping fallback
+      "@/components/*": ["./components/*", "./src/components/*"],
+      "@/lib/*": ["./lib/*", "./src/lib/*"],
+      "@/config/*": ["./config/*", "./src/config/*"],
+      "@/styles/*": ["./styles/*", "./src/styles/*"],
       "@/*": ["./src/*", "./*"]
     }
   },

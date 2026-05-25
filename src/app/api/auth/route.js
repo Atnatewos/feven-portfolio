@@ -1,6 +1,6 @@
 // File: src/app/api/auth/route.js
 import { NextResponse } from 'next/server';
-import { checkAuthRateLimit } from '../../../../lib/security';
+import { checkAuthRateLimit } from '@/lib/security';
 import crypto from 'crypto';
 
 /*
